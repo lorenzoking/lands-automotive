@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - Example Car</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .car-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #f5f5f5;
+        }
+        .car-price {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: orange;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            gap: 10px;
+        }
+        .gallery img {
+            max-height: 300px;
+            border-radius: 10px;
+        }
+        .vehicle-info, .request-info {
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .vehicle-info h3, .request-info h3 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo/Landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="inventory.html">Inventory</a>
+                        <div class="dropdown">
+                            <a href="inventory.html">All Inventory</a>
+                            <a href="inventory-under-10000.html">Under 10,000</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sell.html">Sell Your Car</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bottom-strip">We Want to Buy Your Car!</div>
+    <section class="car-header">
+        <h1>2014 Chevrolet Express</h1>
+        <p class="car-price">$21,995</p>
+    </section>
+    <section class="gallery">
+        <img src="carpics/inventory/FullSizeRender 3.HEIC" alt="Car Image 1">
+        <img src="carpics/inventory/FullSizeRender 4.HEIC" alt="Car Image 2">
+        <img src="carpics/inventory/IMG_0758.HEIC" alt="Car Image 3">
+    </section>
+    <section class="vehicle-info">
+        <h3>Vehicle Information</h3>
+        <p><strong>Make:</strong> Chevrolet</p>
+        <p><strong>Model:</strong> Express</p>
+        <p><strong>VIN:</strong> ABCD1234</p>
+        <p><strong>Mileage:</strong> 45,000 miles</p>
+        <p><strong>Trim Level:</strong> LT</p>
+        <p><strong>Engine:</strong> 6.0L V8</p>
+        <p><strong>Drive Train:</strong> RWD</p>
+    </section>
+    <section class="request-info">
+        <h3>Request More Information</h3>
+        <p>Contact us for more details about this vehicle. Reach out for the Carfax and more.</p>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>Mon-Fri: 9:00 AM - 7:00 PM</p>
+                <p>Sat: 9:00 AM - 5:00 PM</p>
+                <p>Sun: Closed</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phone: 980-333-8898</p>
+                <p>Email: contact@landsautomotive.com</p>
+            </div>
+        </div>
+        <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>
+    </footer>
+</body>
+</html>
