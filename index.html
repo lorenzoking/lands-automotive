@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="assets/styles.css">
     <script defer src="assets/carousel.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 4px 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
@@ -14,8 +31,13 @@
         <div class="header-main">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
+                    <img src="assets/logo/Landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
                 </a>
+            </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
             <nav>
                 <ul>
@@ -46,8 +68,8 @@
             <img src="assets/carpics/FullSizeRender 4.jpeg" alt="Car 3">
             <img src="assets/carpics/IMG_0589.jpeg" alt="Car 4">
             <img src="assets/carpics/IMG_0758.jpeg" alt="Car 5">
-            <img src="assets/carpics/inventory/ford.jpeg" alt="Car 6">
-            <img src="assets/carpics/inventory/honda.jpeg" alt="Car 7">
+            <img src="assets/carpics/IMG_1515.jpeg" alt="Car 6">
+            <img src="assets/carpics/IMG_2174.jpeg" alt="Car 7">
         </div>
         <button class="prev" onclick="previousSlide()">&#10094;</button>
         <button class="next" onclick="nextSlide()">&#10095;</button>
