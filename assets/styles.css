@@ -188,17 +188,21 @@ nav ul li:hover .dropdown {
 
 .reviews-carousel {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     gap: 10px;
-    scroll-behavior: smooth;
+    padding: 10px;
 }
 
 .review-slide {
-    min-width: 250px;
+    flex: 1 0 250px;
+    max-width: 250px;
     background-color: #444;
+    color: #fff;
     padding: 20px;
     border-radius: 8px;
-    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 0 5px;
 }
 
 .maps {
