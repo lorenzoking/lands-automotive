@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Details - Example Car 5</title>
+    <title>Car Details - 2007 Tacoma 4.0 V6 4x4</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <style>
         .car-header {
@@ -12,21 +12,33 @@
             background-color: #222;
             color: #f5f5f5;
         }
+
         .car-price {
             font-size: 1.5em;
             margin-top: 10px;
             color: orange;
         }
+
         .gallery {
             display: flex;
             overflow-x: auto;
             padding: 10px;
             gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
+
         .gallery img {
-            max-height: 300px;
+            max-height: 200px;
             border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
         .vehicle-info, .request-info {
             padding: 20px;
             background-color: #1c1c1c;
@@ -34,12 +46,55 @@
             margin-top: 20px;
             border-radius: 10px;
         }
+
         .vehicle-info h3, .request-info h3 {
             color: orange;
             margin-bottom: 15px;
         }
 
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery img');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox img');
+
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = 'flex';
+                });
+            });
+
+            lightbox.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
@@ -50,41 +105,64 @@
                     <img src="../assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
                 </a>
             </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li>
                         <a href="inventory.html">Inventory</a>
                         <div class="dropdown">
-                            <a href="inventory.html">All Inventory</a>
-                            <a href="inventory-under-10000.html">Under 10,000</a>
+                            <a href="../html/inventory.html">All Inventory</a>
+                            <a href="../html/inventory-under-10000.html">Under 10,000</a>
                         </div>
                     </li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="sell.html">Sell Your Car</a></li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
+                    <li><a href="../html/sell.html">Sell Your Car</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="bottom-strip">We Want to Buy Your Car!</div>
     <section class="car-header">
-        <h1>Example Car 5</h1>
-        <p class="car-price">$29,000</p>
+        <h1>2007 Tacoma 4.0 V6 4x4</h1>
+        <p class="car-price">$10,500</p>
     </section>
     <section class="gallery">
-        <img src="../assets/carpics/inventory/honda.jpeg" alt="Car Image 5">
-        <!-- Add more images as needed -->
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma1.jpg" alt="Car Image 1">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma2.jpg" alt="Car Image 2">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma3.jpg" alt="Car Image 3">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma4.jpg" alt="Car Image 4">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma5.jpg" alt="Car Image 5">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma6.jpg" alt="Car Image 6">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma7.jpg" alt="Car Image 7">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma8.jpg" alt="Car Image 8">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma9.jpg" alt="Car Image 9">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma10.jpg" alt="Car Image 10">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma11.jpg" alt="Car Image 11">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma12.jpg" alt="Car Image 12">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma13.jpg" alt="Car Image 13">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma14.jpg" alt="Car Image 14">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma15.jpg" alt="Car Image 15">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma16.jpg" alt="Car Image 16">
+        <img src="../assets/carpics/inventory/tacoma2007/tacoma17.jpg" alt="Car Image 17">
     </section>
+    <div class="lightbox">
+        <img src="" alt="Expanded Image">
+    </div>
     <section class="vehicle-info">
         <h3>Vehicle Information</h3>
-        <p><strong>Make:</strong> Example Make 5</p>
-        <p><strong>Model:</strong> Example Model 5</p>
-        <p><strong>VIN:</strong> QRST7890</p>
-        <p><strong>Mileage:</strong> 55,000 miles</p>
-        <p><strong>Trim Level:</strong> Example Trim 5</p>
-        <p><strong>Engine:</strong> 4.5L V8</p>
-        <p><strong>Drive Train:</strong> AWD</p>
+        <p><strong>Make:</strong> Toyota</p>
+        <p><strong>Model:</strong> Tacoma 4.0 V6 4x4</p>
+        <p><strong>Year:</strong> 2007</p>
+        <p><strong>Mileage:</strong> 203,000 miles</p>
+        <p><strong>Price:</strong> $10,500 (includes tag, title, and tax)</p>
+        <p><strong>Features:</strong> 4WD, 2 keys, A/C, Back-Up Camera, Windows, Tow Package, Full Weather Tech Mats, New Tires</p>
+        <p><strong>Condition:</strong> Clean title, No accidents or rust, Mechanically in great condition, No leaks or ticks, Very well maintained</p>
     </section>
     <section class="request-info">
         <h3>Request More Information</h3>

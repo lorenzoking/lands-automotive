@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Details - Example Car 4</title>
+    <title>Car Details - 2008 Highlander Sport 4WD</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <style>
         .car-header {
@@ -12,21 +12,33 @@
             background-color: #222;
             color: #f5f5f5;
         }
+
         .car-price {
             font-size: 1.5em;
             margin-top: 10px;
             color: orange;
         }
+
         .gallery {
             display: flex;
             overflow-x: auto;
             padding: 10px;
             gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
+
         .gallery img {
-            max-height: 300px;
+            max-height: 200px;
             border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
         .vehicle-info, .request-info {
             padding: 20px;
             background-color: #1c1c1c;
@@ -34,12 +46,55 @@
             margin-top: 20px;
             border-radius: 10px;
         }
+
         .vehicle-info h3, .request-info h3 {
             color: orange;
             margin-bottom: 15px;
         }
 
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery img');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox img');
+
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = 'flex';
+                });
+            });
+
+            lightbox.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
@@ -50,45 +105,70 @@
                     <img src="../assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
                 </a>
             </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li>
                         <a href="inventory.html">Inventory</a>
                         <div class="dropdown">
-                            <a href="inventory.html">All Inventory</a>
-                            <a href="inventory-under-10000.html">Under 10,000</a>
+                            <a href="../html/inventory.html">All Inventory</a>
+                            <a href="../html/inventory-under-10000.html">Under 10,000</a>
                         </div>
                     </li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="sell.html">Sell Your Car</a></li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
+                    <li><a href="../html/sell.html">Sell Your Car</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="bottom-strip">We Want to Buy Your Car!</div>
     <section class="car-header">
-        <h1>Example Car 4</h1>
-        <p class="car-price">$27,000</p>
+        <h1>2008 Highlander Sport 4WD</h1>
+        <p class="car-price">$8,800</p>
     </section>
     <section class="gallery">
-        <img src="../assets/carpics/inventory/ford.jpeg" alt="Car Image 4">
-        <!-- Add more images as needed -->
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2233.jpeg" alt="Car Image 1">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2237.jpeg" alt="Car Image 2">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2238.jpeg" alt="Car Image 3">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2239.jpeg" alt="Car Image 4">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2240.jpeg" alt="Car Image 5">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2241.jpeg" alt="Car Image 6">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2242.jpeg" alt="Car Image 7">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2243.jpeg" alt="Car Image 8">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2244.jpeg" alt="Car Image 9">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2245.jpeg" alt="Car Image 10">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2246.jpeg" alt="Car Image 11">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2247.jpeg" alt="Car Image 12">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2248.jpeg" alt="Car Image 13">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2249.jpeg" alt="Car Image 14">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2251.jpeg" alt="Car Image 15">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2252.jpeg" alt="Car Image 16">
+        <img src="../assets/carpics/inventory/highlander2008/IMG_2253.jpeg" alt="Car Image 17">
     </section>
+    <div class="lightbox">
+        <img src="" alt="Expanded Image">
+    </div>
     <section class="vehicle-info">
         <h3>Vehicle Information</h3>
-        <p><strong>Make:</strong> Example Make 4</p>
-        <p><strong>Model:</strong> Example Model 4</p>
-        <p><strong>VIN:</strong> MNOP3456</p>
-        <p><strong>Mileage:</strong> 35,000 miles</p>
-        <p><strong>Trim Level:</strong> Example Trim 4</p>
-        <p><strong>Engine:</strong> 4.0L V6</p>
-        <p><strong>Drive Train:</strong> RWD</p>
+        <p><strong>Make:</strong> Toyota</p>
+        <p><strong>Model:</strong> Highlander Sport 4WD</p>
+        <p><strong>Year:</strong> 2008</p>
+        <p><strong>Mileage:</strong> 120,000 miles</p>
+        <p><strong>Price:</strong> $8,800 (out the door including taxes, title, and tag)</p>
+        <p><strong>Features:</strong> 4WD, 3rd row, 2 keys, front/rear A/C, heat, Bluetooth, Great tires</p>
+        <p><strong>Condition:</strong> Clean title, Fully serviced, PRICED TO SELL, Just passed inspection, Runs and drives great, Everything works</p>
     </section>
     <section class="request-info">
-        <h3>Request More Information</h3>
-        <p>Contact us for more details about this vehicle. Reach out for the Carfax and more.</p>
+        <h3>Contact Information</h3>
+        <p>Please reach out to us for more information about our vehicles.</p>
+        <p>Phone: 980-333-8898</p>
+        <p>Email: contact@landsautomotive.com</p>
     </section>
     <footer>
         <div class="footer-content">

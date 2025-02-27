@@ -78,6 +78,11 @@ nav ul li a {
     display: block;
 }
 
+.inventory-grid .car-card a,
+.inventory-preview .car-preview a {
+    color: #ffffff;
+}
+
 nav ul li:hover .dropdown {
     display: block;
 }
