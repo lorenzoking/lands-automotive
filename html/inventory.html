@@ -34,6 +34,7 @@
             padding: 10px; /* Ensure consistent padding inside cards */
             text-align: center;
         }
+
         .car-details h3 {
             font-size: clamp(14px, 2vw, 18px); /* Dynamically adjusts between 14px and 18px */
             white-space: nowrap; /* Prevents text from wrapping to next line */
@@ -41,6 +42,41 @@
             text-overflow: ellipsis; /* Adds ellipsis for overflow text */
             color: black; /* Sets font color to black */
             text-decoration: none; /* Removes underlines */
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .inventory-grid {
+                display: flex;
+                flex-direction: column; /* Stack car cards vertically */
+                align-items: center; /* Center align the cards */
+                padding: 0 10px; /* Add horizontal padding */
+            }
+
+            .car-card {
+                width: 90%; /* Take most of the screen width */
+                margin-bottom: 15px; /* Space between cards */
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow for depth */
+            }
+
+            .car-card img {
+                width: 100%; /* Ensure image takes full width of the card */
+                height: 60%; /* Adjust height to fit within the card */
+                object-fit: cover; /* Ensure image maintains aspect ratio */
+            }
+
+            .car-details {
+                padding: 15px; /* Increase padding for readability */
+            }
+
+            .car-details h3, .car-details p {
+                font-size: 16px; /* Consistent font size */
+                line-height: 1.4; /* Improve readability */
+            }
+
+            .car-details h3 {
+                font-weight: bold; /* Emphasize make and model */
+            }
         }
     </style>
     <script>
