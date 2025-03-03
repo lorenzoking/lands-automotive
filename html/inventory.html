@@ -12,6 +12,36 @@
             background-color: #333;
             margin: 4px 0;
         }
+
+        .car-card {
+            width: 250px; /* Set a fixed width */
+            height: 350px; /* Set a fixed height */
+            overflow: hidden; /* Ensure overflow is hidden */
+            margin: 10px; /* Add some spacing */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #f5f5f5; /* Background color */
+        }
+
+        .car-card img {
+            width: 100%; /* Make sure image takes full width */
+            height: 60%; /* Adjust height to fit within the card */
+            object-fit: cover; /* Ensure image covers the container */
+            border-top-left-radius: 10px; /* Align with card border-radius */
+            border-top-right-radius: 10px;
+        }
+
+        .car-details {
+            padding: 10px; /* Ensure consistent padding inside cards */
+            text-align: center;
+        }
+        .car-details h3 {
+            font-size: clamp(14px, 2vw, 18px); /* Dynamically adjusts between 14px and 18px */
+            white-space: nowrap; /* Prevents text from wrapping to next line */
+            overflow: hidden; /* Hides overflow */
+            text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+            color: black; /* Sets font color to black */
+            text-decoration: none; /* Removes underlines */
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -69,8 +99,18 @@
   <h2>Our Inventory</h2>
     <div class="inventory-grid">
         <div class="car-card">
+            <a href="car3.html">
+                <img src="../assets/carpics/inventory/accord2019/accord1.jpeg" alt="2019 Honda Accord Sport">
+                <div class="car-details">
+                    <h3>2019 Honda Accord Sport</h3>
+                    <p>Mileage: 167,000 miles</p>
+                    <p>Price: $12,995</p>
+                </div>
+            </a>
+        </div>
+        <div class="car-card">
             <a href="car1.html">
-                <img src="../assets/carpics/inventory/rav42016/IMG_2356.jpeg" alt="2016 Toyota RAV4 XLE">
+                <img src="../assets/carpics/inventory/rav42016/rav1.jpg" alt="2016 Toyota RAV4 XLE">
                 <div class="car-details">
                     <h3>2016 Toyota RAV4 XLE</h3>
                     <p>Mileage: 82,000 miles</p>
@@ -80,31 +120,31 @@
         </div>
         <div class="car-card">
             <a href="car2.html">
-                <img src="../assets/carpics/inventory/altima2016/IMG_2292.jpeg" alt="2016 Nissan Altima SV">
+                <img src="../assets/carpics/inventory/alt2016/alt1.jpg" alt="2016 Nissan Altima SV">
                 <div class="car-details">
                     <h3>2016 Nissan Altima SV</h3>
                     <p>Mileage: 101,000 miles</p>
-                    <p>Price: $7,800</p>
-                </div>
-            </a>
-        </div>
-        <div class="car-card">
-            <a href="car3.html">
-                <img src="../assets/carpics/inventory/accord2019/accord1.jpg" alt="2019 Honda Accord Sport">
-                <div class="car-details">
-                    <h3>2019 Honda Accord Sport</h3>
-                    <p>Mileage: 167,000 miles</p>
-                    <p>Price: $12,995</p>
+                    <p style="color: red;">SOLD: $7,800</p>
                 </div>
             </a>
         </div>
         <div class="car-card">
             <a href="car4.html">
-                <img src="../assets/carpics/inventory/highlander2008/IMG_2233.jpeg" alt="2008 Highlander Sport 4WD">
+                <img src="../assets/carpics/inventory/land2008/land1.jpg" alt="2008 Highlander Sport 4WD">
                 <div class="car-details">
                     <h3>2008 Highlander Sport 4WD</h3>
                     <p>Mileage: 120,000 miles</p>
                     <p>Price: $8,800</p>
+                </div>
+            </a>
+        </div>
+        <div class="car-card">
+            <a href="car-accord2008.html">
+                <img src="../assets/carpics/inventory/accord2008/08acc1.jpg" alt="2008 Honda Accord LX">
+                <div class="car-details">
+                    <h3>2008 Honda Accord LX</h3>
+                    <p>Mileage: 157,000 miles</p>
+                    <p>Price: $6,800</p>
                 </div>
             </a>
         </div>
@@ -131,7 +171,7 @@
         <div class="contact-info">
             <h3>Contact Us</h3>
             <p>Phone: 980-333-8898</p>
-            <p>Email: contact@landsautomotive.com</p>
+            <p>Email: Jourdan@lands-automotive.com</p>
         </div>
     </div>
     <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>

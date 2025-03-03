@@ -83,6 +83,13 @@ nav ul li a {
     color: #ffffff;
 }
 
+.inventory-grid .car-card p:last-child,
+.inventory-preview .car-preview p:last-child {
+    color: orange;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 nav ul li:hover .dropdown {
     display: block;
 }
