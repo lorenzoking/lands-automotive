@@ -14,6 +14,19 @@
             background-color: #333;
             margin: 4px 0;
         }
+        /* Mission Statement Styling */
+        .mission-statement {
+            background-color: #222;
+            color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #555;
+        }
+        .mission-statement h2 {
+            margin-top: 0;
+            color: #ffa500; /* Orange color for heading */
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -74,24 +87,31 @@
         <button class="prev" onclick="previousSlide()">&#10094;</button>
         <button class="next" onclick="nextSlide()">&#10095;</button>
     </section>
+
+    <!-- Mission Statement Block -->
+    <section class="mission-statement">
+        <h2>Our Mission</h2>
+        <p>At Lands, we are committed to serving our community with integrity and excellence. Every client is valued and supported from the first visit to long after their purchase. Trust us for all your automotive needs—because we put YOU first!</p>
+    </section>
+
     <section class="featured">
         <h2>Featured Inventory</h2>
         <div class="inventory-preview">
             <div class="car-preview">
-                <a href="html/car1.html"><img src="assets/carpics/inventory/rav42016/rav1.jpg" alt="2016 Toyota RAV4 XLE"></a>
-                <p>2016 Toyota RAV4 XLE</p>
+                <a href="html/car-corolla-2010.html"><img src="assets/carpics/inventory/corolla2010/cor1.jpg" alt="2010 Toyota Corolla LE"></a>
+                <p>2010 Toyota Corolla LE - $8,200</p>
             </div>
             <div class="car-preview">
-                <a href="html/car2.html"><img src="assets/carpics/inventory/alt2016/alt1.jpg" alt="2016 Nissan Altima SV"></a>
-                <p>2016 Nissan Altima SV</p>
+                <a href="html/car-highlander-2012.html"><img src="assets/carpics/inventory/highlander2012/hl1.jpg" alt="2012 Toyota Highlander 4D Sport Utility V6 AWD"></a>
+                <p>2012 Toyota Highlander - $10,500</p>
             </div>
             <div class="car-preview">
-                <a href="html/car3.html"><img src="assets/carpics/inventory/accord2019/accord1.jpeg" alt="2019 Honda Accord Sport"></a>
-                <p>2019 Honda Accord Sport</p>
+                <a href="html/car-rav4-2012.html"><img src="assets/carpics/inventory/rav42012/rav1.jpeg" alt="2012 Toyota RAV4 Coming Soon"></a>
+                <p>2012 Toyota RAV4 - $6,500 Coming Soon</p>
             </div>
             <div class="car-preview">
-                <a href="html/car4.html"><img src="assets/carpics/inventory/land2008/land1.jpg" alt="2008 Highlander Sport 4WD"></a>
-                <p>2008 Highlander Sport 4WD</p>
+                <a href="html/car-crv-2014.html"><img src="assets/carpics/inventory/crv2014/crv1.jpg" alt="2014 HONDA CRV Coming Soon"></a>
+                <p>2014 HONDA CRV - $7,995 Coming Soon</p>
             </div>
         </div>
     </section>
@@ -110,9 +130,10 @@
         <div class="footer-content">
             <div class="business-hours">
                 <h3>Business Hours</h3>
-                <p>Mon-Fri: 9:00 AM - 7:00 PM</p>
-                <p>Sat: 9:00 AM - 5:00 PM</p>
-                <p>Sun: Closed</p>
+                <p>By Appointment Only</p>
+                <p>Monday - Friday: 10 AM – 6 PM</p>
+                <p>Saturday: 10 AM – 2 PM</p>
+                <p>Sunday: Closed</p>
             </div>
             <div class="contact-info">
                 <h3>Contact Us</h3>
