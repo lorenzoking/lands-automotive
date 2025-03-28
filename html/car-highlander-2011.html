@@ -3,8 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - 2011 Toyota Highlander SE</title>
+    <title>Car Details - 2011 Toyota Highlander Sport</title>
     <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .car-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #f5f5f5;
+        }
+
+        .car-price {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: orange;
+        }
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            max-height: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .vehicle-info, .request-info {
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .vehicle-info h3, .request-info h3 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery img');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox img');
+
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = 'flex';
+                });
+            });
+
+            lightbox.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
@@ -39,8 +129,48 @@
     </header>
     <div class="bottom-strip">We Want to Buy Your Car!</div>
     <section class="car-header">
-        <h1>Coming Soon - 2011 Toyota Highlander SE</h1>
-        <p class="car-details">112,000 miles</p>
+        <h1>2011 Toyota Highlander Sport</h1>
+        <p class="car-price">$11,500</p>
+    </section>
+    <section class="gallery">
+  <img src="../assets/carpics/inventory/highland2011/high1.jpg" alt="Car Image 1">
+  <img src="../assets/carpics/inventory/highland2011/high2.jpg" alt="Car Image 2">
+  <img src="../assets/carpics/inventory/highland2011/high3.jpg" alt="Car Image 3">
+  <img src="../assets/carpics/inventory/highland2011/high4.jpg" alt="Car Image 4">
+  <img src="../assets/carpics/inventory/highland2011/high5.jpg" alt="Car Image 5">
+  <img src="../assets/carpics/inventory/highland2011/high6.jpg" alt="Car Image 6">
+  <img src="../assets/carpics/inventory/highland2011/high7.jpg" alt="Car Image 7">
+  <img src="../assets/carpics/inventory/highland2011/high8.jpg" alt="Car Image 8">
+  <img src="../assets/carpics/inventory/highland2011/high9.jpg" alt="Car Image 9">
+  <img src="../assets/carpics/inventory/highland2011/high10.jpg" alt="Car Image 10">
+  <img src="../assets/carpics/inventory/highland2011/high11.jpg" alt="Car Image 11">
+  <img src="../assets/carpics/inventory/highland2011/high12.jpg" alt="Car Image 12">
+  <img src="../assets/carpics/inventory/highland2011/high13.jpg" alt="Car Image 13">
+  <img src="../assets/carpics/inventory/highland2011/high14.jpg" alt="Car Image 14">
+  <img src="../assets/carpics/inventory/highland2011/high15.jpg" alt="Car Image 15">
+  <img src="../assets/carpics/inventory/highland2011/high16.jpg" alt="Car Image 16">
+  <img src="../assets/carpics/inventory/highland2011/high17.jpg" alt="Car Image 17">
+</section>
+    <div class="lightbox">
+        <img src="" alt="Expanded Image">
+    </div>
+    <section class="vehicle-info">
+    <h3>Vehicle Information</h3>
+    <p><strong>Make:</strong> Toyota</p>
+    <p><strong>Model:</strong> Highlander Sport</p>
+    <p><strong>Year:</strong> 2011</p>
+    <p><strong>Mileage:</strong> 117,000 miles</p>
+    <p><strong>Condition:</strong> 2-Owner, Fully Serviced</p>
+    <p>PRICED TO SELL. Just passed inspection.</p>
+    <p>Runs and drives great! Everything works. 3rd row, 2 keys, front/rear A/C, heat, Bluetooth, Great tires.</p>
+    <p>Serious inquiries only. Thank you.</p>
+    <p><strong>Price:</strong> $11,500</p>
+</section>
+    <section class="request-info">
+        <h3>Contact Information</h3>
+        <p>Please reach out to us for more information about this vehicle.</p>
+        <p>Phone: 980-333-8898</p>
+        <p>Email: jourdan@lands-automotive.com</p>
     </section>
     <footer>
         <div class="footer-content">
@@ -54,7 +184,7 @@
             <div class="contact-info">
                 <h3>Contact Us</h3>
                 <p>Phone: 980-333-8898</p>
-                <p>Email: contact@landsautomotive.com</p>
+                <p>Email: jourdan@lands-automotive.com</p>
             </div>
         </div>
         <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>
