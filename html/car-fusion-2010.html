@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - 2010 Ford Fusion SE</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .car-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #f5f5f5;
+        }
+
+        .car-price {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: orange;
+        }
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            max-height: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .vehicle-info, .request-info {
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .vehicle-info h3, .request-info h3 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="inventory.html">Inventory</a>
+                        <div class="dropdown">
+                            <a href="inventory.html">All Inventory</a>
+                            <a href="inventory-under-10000.html">Under 10,000</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sell.html">Sell Your Car</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bottom-strip">We Want to Buy Your Car!</div>
+
+    <div class="car-header">
+        <h1>2010 Ford Fusion Hybrid</h1>
+        <p class="car-price">$6,500</p>
+        <p>Mileage: 123,000 miles</p>
+        <p>Status: Available Now</p>
+    </div>
+
+    <div class="gallery">
+        <img src="../assets/carpics/inventory/fusion2010/fus1.jpg" alt="2010 Ford Fusion SE - Front View" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus2.jpg" alt="2010 Ford Fusion SE - Side View" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus3.jpg" alt="2010 Ford Fusion SE - Rear View" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus4.jpg" alt="2010 Ford Fusion SE - Interior Front" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus5.jpg" alt="2010 Ford Fusion SE - Dashboard" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus6.jpg" alt="2010 Ford Fusion SE - Center Console" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus7.jpg" alt="2010 Ford Fusion SE - Front Seats" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus8.jpg" alt="2010 Ford Fusion SE - Rear Seats" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus9.jpg" alt="2010 Ford Fusion SE - Cargo Area" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus10.jpg" alt="2010 Ford Fusion SE - Engine" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus11.jpg" alt="2010 Ford Fusion SE - Wheel Detail" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus12.jpg" alt="2010 Ford Fusion SE - Exterior Detail" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus13.jpg" alt="2010 Ford Fusion SE - Side Profile" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus14.jpg" alt="2010 Ford Fusion SE - Front Angle" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus15.jpg" alt="2010 Ford Fusion SE - Interior Detail" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus16.jpg" alt="2010 Ford Fusion SE - Technology Features" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus17.jpg" alt="2010 Ford Fusion SE - Hybrid System" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus18.jpg" alt="2010 Ford Fusion SE - Safety Features" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/fusion2010/fus19.jpg" alt="2010 Ford Fusion SE - Overall View" onclick="openLightbox(this)">
+    </div>
+
+    <div class="vehicle-info">
+        <h3>Vehicle Information</h3>
+        <ul>
+            <li><strong>Title Status:</strong> Clean Title in Hand</li>
+            <li><strong>Ownership:</strong> 1-Owner</li>
+            <li><strong>Keys:</strong> 2 Keys Included</li>
+            <li><strong>Engine:</strong> Reliable 2.5L Hybrid</li>
+            <li><strong>Fuel Economy:</strong> 35+ MPG</li>
+            <li><strong>Condition:</strong> Great Condition, Fully Loaded</li>
+            <li><strong>Features:</strong>
+                <ul>
+                    <li>A/C and Heat</li>
+                    <li>Blind-spot Monitoring</li>
+                    <li>Rear View Camera</li>
+                    <li>AUX/USB Connection</li>
+                    <li>Satellite Radio</li>
+                    <li>Remote Start</li>
+                    <li>Sunroof</li>
+                    <li>Great Tires</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>Note:</strong> Mechanically in excellent condition. Starts and idles smoothly. Safe and affordable daily driver. Serious inquiries only.</p>
+    </div>
+
+    <div class="request-info">
+        <h3>Interested in this vehicle?</h3>
+        <p>Call us at: 980-333-8898</p>
+        <p>Email: Jourdan@lands-automotive.com</p>
+        <p>Address: 4435 Motorsports Dr Suite 120, Concord, NC</p>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target !== document.getElementById('lightbox-img')) {
+                closeLightbox();
+            }
+        });
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>By Appointment Only</p>
+                <p>Monday - Friday: 10 AM – 6 PM</p>
+                <p>Saturday: 10 AM – 2 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phone: 980-333-8898</p>
+                <p>Email: Jourdan@lands-automotive.com</p>
+            </div>
+        </div>
+        <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
