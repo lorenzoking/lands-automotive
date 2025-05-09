@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - 2015 Hyundai Santa Fe GLS</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .car-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #f5f5f5;
+        }
+
+        .car-price {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: orange;
+        }
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            max-height: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .vehicle-info, .request-info {
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .vehicle-info h3, .request-info h3 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery img');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox img');
+
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = 'flex';
+                });
+            });
+
+            lightbox.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="inventory.html">Inventory</a>
+                        <div class="dropdown">
+                            <a href="../html/inventory.html">All Inventory</a>
+                            <a href="../html/inventory-under-10000.html">Under 10,000</a>
+                        </div>
+                    </li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
+                    <li><a href="../html/sell.html">Sell Your Car</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bottom-strip">We Want to Buy Your Car!</div>
+    <section class="car-header">
+        <h1>2015 Hyundai Santa Fe GLS AWD</h1>
+        <p style="color: rgb(255, 255, 255);" class="car-price">$7,800</p>
+    </section>
+    <section class="gallery">
+        <img src="../assets/carpics/inventory/santafe2015/san1.jpg" alt="Front View">
+        <img src="../assets/carpics/inventory/santafe2015/san2.jpg" alt="Side View">
+        <img src="../assets/carpics/inventory/santafe2015/san3.jpg" alt="Rear View">
+        <img src="../assets/carpics/inventory/santafe2015/san4.jpg" alt="Interior">
+        <img src="../assets/carpics/inventory/santafe2015/san5.jpg" alt="Dashboard">
+        <img src="../assets/carpics/inventory/santafe2015/san6.jpg" alt="Seats">
+        <img src="../assets/carpics/inventory/santafe2015/san7.jpg" alt="Console">
+        <img src="../assets/carpics/inventory/santafe2015/san8.jpg" alt="Back Seats">
+        <img src="../assets/carpics/inventory/santafe2015/san9.jpg" alt="Cargo Space">
+        <img src="../assets/carpics/inventory/santafe2015/san10.jpg" alt="Engine">
+        <img src="../assets/carpics/inventory/santafe2015/san11.jpg" alt="Additional View 1">
+        <img src="../assets/carpics/inventory/santafe2015/san12.jpg" alt="Additional View 2">
+        <img src="../assets/carpics/inventory/santafe2015/san13.jpg" alt="Additional View 3">
+        <img src="../assets/carpics/inventory/santafe2015/san14.jpg" alt="Additional View 4">
+        <img src="../assets/carpics/inventory/santafe2015/san15.jpg" alt="Additional View 5">
+        <img src="../assets/carpics/inventory/santafe2015/san16.jpg" alt="Additional View 6">
+        <img src="../assets/carpics/inventory/santafe2015/san17.jpg" alt="Additional View 7">
+        <img src="../assets/carpics/inventory/santafe2015/san18.jpg" alt="Additional View 8">
+        <img src="../assets/carpics/inventory/santafe2015/san19.jpg" alt="Additional View 9">
+    </section>
+    <div class="lightbox">
+        <img src="" alt="Expanded Image">
+    </div>
+    <section class="vehicle-info">
+        <h3>Vehicle Information</h3>
+        <p><strong>Make:</strong> Hyundai</p>
+        <p><strong>Model:</strong> Santa Fe GLS AWD</p>
+        <p><strong>Year:</strong> 2015</p>
+        <p><strong>Engine:</strong> 3.3L V6</p>
+        <p><strong>Mileage:</strong> 156,000 miles</p>
+        <p><strong>Title:</strong> Clean Title</p>
+        <p><strong>Ownership:</strong> 2 Owners</p>
+        <p><strong>Status:</strong> Available Now</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+            <li>A/C</li>
+            <li>Backup Camera</li>
+            <li>Bluetooth Connectivity</li>
+            <li>Power/Heated Seats</li>
+            <li>Parking Sensors</li>
+            <li>Third Row Seating</li>
+            <li>2 Keys</li>
+            <li>Great Tires</li>
+            <li>Service Records</li>
+            <li>Just Passed NC Inspection</li>
+        </ul>
+        <p>Mechanically this SUV is in great condition.</p>
+        <p>Cosmetically it is in very good condition.</p>
+        <p>Service records available.</p>
+        <p><strong>Price:</strong> $7,800</p>
+        <p><em>Serious inquiries only.</em></p>
+    </section>
+    <section class="request-info">
+        <h3>Contact Information</h3>
+        <p>Please reach out to us for more information about this vehicle.</p>
+        <p>Phone: 980-333-8898</p>
+        <p>Email: Jourdan@lands-automotive.com</p>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>By Appointment Only</p>
+                <p>Monday - Friday: 10 AM – 6 PM</p>
+                <p>Saturday: 10 AM – 2 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phone: 980-333-8898</p>
+                <p>Email: Jourdan@lands-automotive.com</p>
+            </div>
+        </div>
+        <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

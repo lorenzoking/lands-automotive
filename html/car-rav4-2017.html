@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - 2017 Toyota RAV4</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .car-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #f5f5f5;
+        }
+
+        .car-price {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: orange;
+        }
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            max-height: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .vehicle-info, .request-info {
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .vehicle-info h3, .request-info h3 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery img');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox img');
+
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = 'flex';
+                });
+            });
+
+            lightbox.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="inventory.html">Inventory</a>
+                        <div class="dropdown">
+                            <a href="../html/inventory.html">All Inventory</a>
+                            <a href="../html/inventory-under-10000.html">Under 10,000</a>
+                        </div>
+                    </li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
+                    <li><a href="../html/sell.html">Sell Your Car</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bottom-strip">We Want to Buy Your Car!</div>
+    <section class="car-header">
+        <h1>2017 Toyota RAV4 LIMITED</h1>
+        <p style="color: rgb(255, 255, 255);" class="car-price">$15,500</p>
+    </section>
+    <section class="gallery">
+        <img src="../assets/carpics/inventory/rav2017/rav1.jpg" alt="Front View">
+        <img src="../assets/carpics/inventory/rav2017/rav2.jpg" alt="Side View">
+        <img src="../assets/carpics/inventory/rav2017/rav3.jpg" alt="Rear View">
+        <img src="../assets/carpics/inventory/rav2017/rav4.jpg" alt="Interior">
+        <img src="../assets/carpics/inventory/rav2017/rav5.jpg" alt="Dashboard">
+        <img src="../assets/carpics/inventory/rav2017/rav6.jpg" alt="Seats">
+        <img src="../assets/carpics/inventory/rav2017/rav7.jpg" alt="Console">
+        <img src="../assets/carpics/inventory/rav2017/rav8.jpg" alt="Back Seats">
+        <img src="../assets/carpics/inventory/rav2017/rav9.jpg" alt="Cargo Space">
+        <img src="../assets/carpics/inventory/rav2017/rav10.jpg" alt="Engine">
+        <img src="../assets/carpics/inventory/rav2017/rav11.jpg" alt="Additional View 1">
+        <img src="../assets/carpics/inventory/rav2017/rav12.jpg" alt="Additional View 2">
+        <img src="../assets/carpics/inventory/rav2017/rav13.jpg" alt="Additional View 3">
+        <img src="../assets/carpics/inventory/rav2017/rav14.jpg" alt="Additional View 4">
+        <img src="../assets/carpics/inventory/rav2017/rav15.jpg" alt="Additional View 5">
+        <img src="../assets/carpics/inventory/rav2017/rav16.jpg" alt="Additional View 6">
+        <img src="../assets/carpics/inventory/rav2017/rav17.jpg" alt="Additional View 7">
+        <img src="../assets/carpics/inventory/rav2017/rav18.jpg" alt="Additional View 8">
+        <img src="../assets/carpics/inventory/rav2017/rav19.jpg" alt="Additional View 9">
+    </section>
+    <div class="lightbox">
+        <img src="" alt="Expanded Image">
+    </div>
+    <section class="vehicle-info">
+        <h3>Vehicle Information</h3>
+        <p><strong>Make:</strong> Toyota</p>
+        <p><strong>Model:</strong> RAV4 LIMITED</p>
+        <p><strong>Year:</strong> 2017</p>
+        <p><strong>Mileage:</strong> 130,000 miles</p>
+        <p><strong>Title:</strong> Clean Title</p>
+        <p><strong>Ownership:</strong> 2 Owners</p>
+        <p><strong>Status:</strong> Available Now</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+            <li>A/C</li>
+            <li>Backup Camera</li>
+            <li>Blind Spot Monitoring</li>
+            <li>Parking Sensors</li>
+            <li>Sunroof</li>
+            <li>Lane Departure Warning</li>
+            <li>Great Tires</li>
+            <li>Full Service Records</li>
+        </ul>
+        <p>Mechanically this SUV is in great condition, and VERY WELL MAINTAINED. No issues whatsoever.</p>
+        <p>Cosmetically it is in very good condition.</p>
+        <p>Service records available.</p>
+        <p><strong>Price:</strong> $15,500</p>
+        <p><em>Serious inquiries only.</em></p>
+    </section>
+    <section class="request-info">
+        <h3>Contact Information</h3>
+        <p>Please reach out to us for more information about this vehicle.</p>
+        <p>Phone: 980-333-8898</p>
+        <p>Email: Jourdan@lands-automotive.com</p>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>By Appointment Only</p>
+                <p>Monday - Friday: 10 AM – 6 PM</p>
+                <p>Saturday: 10 AM – 2 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phone: 980-333-8898</p>
+                <p>Email: Jourdan@lands-automotive.com</p>
+            </div>
+        </div>
+        <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
