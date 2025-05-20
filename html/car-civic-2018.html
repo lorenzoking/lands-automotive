@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Details - 2018 Nissan Rogue</title>
+    <title>2018 Honda Civic EX-L - Lands Automotive Group</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <style>
         .car-header {
@@ -72,22 +72,19 @@
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.gallery img');
+        function openLightbox(img) {
             const lightbox = document.querySelector('.lightbox');
-            const lightboxImg = document.querySelector('.lightbox img');
+            const lightboxImg = lightbox.querySelector('img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        }
 
-            images.forEach(img => {
-                img.addEventListener('click', function() {
-                    lightboxImg.src = img.src;
-                    lightbox.style.display = 'flex';
-                });
-            });
+        function closeLightbox() {
+            const lightbox = document.querySelector('.lightbox');
+            lightbox.style.display = 'none';
+        }
 
-            lightbox.addEventListener('click', function() {
-                lightbox.style.display = 'none';
-            });
-
+        document.addEventListener('DOMContentLoaded', function() {
             const toggle = document.querySelector('.nav-toggle');
             const nav = document.querySelector('nav ul');
             toggle.addEventListener('click', function() {
@@ -120,74 +117,76 @@
                             <a href="../html/inventory-under-10000.html">Under 10,000</a>
                         </div>
                     </li>
-                    <li><a href="../html/about.html">About Us</a></li>
-                    <li><a href="../html/contact.html">Contact Us</a></li>
-                    <li><a href="../html/sell.html">Sell Your Car</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sell.html">Sell Your Car</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="bottom-strip">We Want to Buy Your Car!</div>
+
     <section class="car-header">
-        <h1>2018 Nissan Rogue Sport AWD</h1>
-        <p style="color: rgb(255, 0, 0);">SOLD: $10,800</p>
+        <h1>2018 Honda Civic EX-L Sedan</h1>
+        <p class="car-price">$14,995</p>
+        <p>VIN: 2HGFC2F76JH553221</p>
     </section>
+
     <section class="gallery">
-        <img src="../assets/carpics/inventory/rogue2018/rogue1.jpg" alt="Front View">
-        <img src="../assets/carpics/inventory/rogue2018/rogue2.jpg" alt="Side View">
-        <img src="../assets/carpics/inventory/rogue2018/rogue3.jpg" alt="Rear View">
-        <img src="../assets/carpics/inventory/rogue2018/rogue4.jpg" alt="Interior">
-        <img src="../assets/carpics/inventory/rogue2018/rogue5.jpg" alt="Dashboard">
-        <img src="../assets/carpics/inventory/rogue2018/rogue6.jpg" alt="Seats">
-        <img src="../assets/carpics/inventory/rogue2018/rogue7.jpg" alt="Console">
-        <img src="../assets/carpics/inventory/rogue2018/rogue8.jpg" alt="Back Seats">
-        <img src="../assets/carpics/inventory/rogue2018/rogue9.jpg" alt="Cargo Space">
-        <img src="../assets/carpics/inventory/rogue2018/rogue10.jpg" alt="Engine">
-        <img src="../assets/carpics/inventory/rogue2018/rogue11.jpg" >
-        <img src="../assets/carpics/inventory/rogue2018/rogue12.jpg" >
-        <img src="../assets/carpics/inventory/rogue2018/rogue13.jpg" >
-        <img src="../assets/carpics/inventory/rogue2018/rogue14.jpg" >
-        <img src="../assets/carpics/inventory/rogue2018/rogue15.jpg" >
-        <img src="../assets/carpics/inventory/rogue2018/rogue16.jpg" >
-        <img src="../assets/carpics/inventory/rogue2018/rogue17.jpg" >
-        <img src="../assets/carpics/inventory/rogue2018/rogue18.jpg" >
-        
+        <img src="../assets/carpics/inventory/civic2018/civ1.jpg" alt="2018 Honda Civic EX-L Front View" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ2.jpg" alt="2018 Honda Civic EX-L Interior" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ3.jpg" alt="2018 Honda Civic EX-L Side View" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ4.jpg" alt="2018 Honda Civic EX-L Rear View" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ5.jpg" alt="2018 Honda Civic EX-L Dashboard" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ6.jpg" alt="2018 Honda Civic EX-L Front Seat" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ7.jpg" alt="2018 Honda Civic EX-L Back Seat" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ8.jpg" alt="2018 Honda Civic EX-L Trunk" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ9.jpg" alt="2018 Honda Civic EX-L Engine" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ10.jpg" alt="2018 Honda Civic EX-L Wheel" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ11.jpg" alt="2018 Honda Civic EX-L Interior Detail" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ12.jpg" alt="2018 Honda Civic EX-L Exterior Detail" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ13.jpg" alt="2018 Honda Civic EX-L Additional View" onclick="openLightbox(this)">
+        <img src="../assets/carpics/inventory/civic2018/civ14.jpg" alt="2018 Honda Civic EX-L Final View" onclick="openLightbox(this)">
     </section>
-    <div class="lightbox">
+
+    <div class="lightbox" onclick="closeLightbox()">
         <img src="" alt="Expanded Image">
     </div>
+
     <section class="vehicle-info">
         <h3>Vehicle Information</h3>
-        <p><strong>Make:</strong> Nissan</p>
-        <p><strong>Model:</strong> Rogue Sport AWD</p>
+        <p><strong>Make:</strong> Honda</p>
+        <p><strong>Model:</strong> Civic EX-L Sedan</p>
         <p><strong>Year:</strong> 2018</p>
-        <p><strong>Mileage:</strong> 101,000 miles</p>
+        <p><strong>Mileage:</strong> 103,000 miles</p>
         <p><strong>Title:</strong> Clean Title</p>
-        <p><strong>Status:</strong> Just Passed NC Inspection</p>
-        <p><strong>Recent Updates:</strong> New tires</p>
+        <p><strong>Status:</strong> Available Now</p>
+        <p><strong>Recent Updates:</strong> New tires and brakes</p>
         <p>Features include:</p>
         <ul>
-            <li>A/C</li>
-            <li>Apple Car Play</li>
+            <li>Apple CarPlay</li>
             <li>Backup Camera</li>
-            <li>Blind Spot Monitor</li>
-            <li>Cross Traffic Warning</li>
-            <li>Lane Departure Warning</li>
             <li>Parking Sensors</li>
-            <li>Great Tires</li>
+            <li>Sunroof</li>
+            <li>Air Conditioning</li>
+            <li>Power Windows & Locks</li>
+            <li>Bluetooth Connectivity</li>
+            <li>Premium Audio System</li>
         </ul>
-        <p>Mechanically this SUV is in great condition, and VERY WELL MAINTAINED. No issues whatsoever.</p>
+        <p>Mechanically this sedan is in excellent condition, and VERY WELL MAINTAINED. No issues whatsoever.</p>
         <p>Cosmetically it is in very good condition.</p>
         <p>Service records available.</p>
-        <p><strong>Price:</strong> $10,800</p>
+        <p><strong>Price:</strong> $14,995</p>
         <p><em>Serious inquiries only.</em></p>
     </section>
+
     <section class="request-info">
         <h3>Contact Information</h3>
         <p>Please reach out to us for more information about this vehicle.</p>
         <p>Phone: 980-333-8898</p>
         <p>Email: Jourdan@lands-automotive.com</p>
     </section>
+
     <footer>
         <div class="footer-content">
             <div class="business-hours">
