@@ -6,24 +6,85 @@
     <title>2013 Honda Civic - Lands Automotive Group</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <style>
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        .car-header {
+            text-align: center;
             padding: 20px;
+            background-color: #222;
+            color: #f5f5f5;
+        }
+        .car-price {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: orange;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
+            max-height: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
-        .car-details {
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .vehicle-info, .request-info {
             padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            margin: 20px;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .vehicle-info h3, .request-info h3 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery img');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox img');
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = 'flex';
+                });
+            });
+            lightbox.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+            const toggle = document.querySelector('.nav-toggle');
+            if (toggle) {
+                const nav = document.querySelector('nav ul');
+                toggle.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
@@ -46,43 +107,65 @@
         </div>
     </header>
     <div class="bottom-strip">We Want to Buy Your Car!</div>
-
-    <section class="car-details">
-        <h1>2013 Honda Civic</h1>
-        <h2>Price: $8,500</h2>
-        <p>Mileage: 159,000 miles</p>
-        <h3>Vehicle Details:</h3>
-        <ul>
-            <li>Year: 2013</li>
-            <li>Make: Honda</li>
-            <li>Model: Civic</li>
-            <li>Mileage: 159,000 miles</li>
-            <li>Price: $8,500</li>
-            <li>Clean Title</li>
-            <li>1.8L I4 Engine</li>
-            <li>Automatic Transmission</li>
-            <li>Front-Wheel Drive</li>
-        </ul>
-        <h3>Features:</h3>
-        <ul>
-            <li>Power Windows & Locks</li>
-            <li>Air Conditioning</li>
-            <li>Bluetooth Connectivity</li>
-            <li>USB Port</li>
-            <li>Cruise Control</li>
-            <li>Power Mirrors</li>
-            <li>Alloy Wheels</li>
-            <li>Backup Camera</li>
-        </ul>
+    <section class="car-header">
+        <h1>2013 Honda Civic LX</h1>
+        <p style="color: rgb(255, 255, 255);" class="car-price">$7,800</p>
     </section>
-
     <section class="gallery">
-        <img src="../assets/carpics/inventory/civic2013/car1.jpg" alt="2013 Honda Civic Front View">
-        <img src="../assets/carpics/inventory/civic2013/car2.jpg" alt="2013 Honda Civic Side View">
-        <img src="../assets/carpics/inventory/civic2013/car3.jpg" alt="2013 Honda Civic Interior">
-        <img src="../assets/carpics/inventory/civic2013/car4.jpg" alt="2013 Honda Civic Dashboard">
+        <img src="../assets/carpics/inventory/civic2013/civic-01.jpg" alt="2013 Honda Civic Front View">
+        <img src="../assets/carpics/inventory/civic2013/civic-02.jpg" alt="2013 Honda Civic Side View">
+        <img src="../assets/carpics/inventory/civic2013/civic-03.jpg" alt="2013 Honda Civic Rear View">
+        <img src="../assets/carpics/inventory/civic2013/civic-04.jpg" alt="2013 Honda Civic Interior">
+        <img src="../assets/carpics/inventory/civic2013/civic-05.jpg" alt="2013 Honda Civic Dashboard">
+        <img src="../assets/carpics/inventory/civic2013/civic-06.jpg" alt="2013 Honda Civic Seats">
+        <img src="../assets/carpics/inventory/civic2013/civic-07.jpg" alt="2013 Honda Civic Console">
+        <img src="../assets/carpics/inventory/civic2013/civic-08.jpg" alt="2013 Honda Civic Back Seats">
+        <img src="../assets/carpics/inventory/civic2013/civic-09.jpg" alt="2013 Honda Civic Engine">
+        <img src="../assets/carpics/inventory/civic2013/civic-10.jpg" alt="2013 Honda Civic Additional View 1">
+        <img src="../assets/carpics/inventory/civic2013/civic-11.jpg" alt="2013 Honda Civic Additional View 2">
+        <img src="../assets/carpics/inventory/civic2013/civic-12.jpg" alt="2013 Honda Civic Additional View 3">
+        <img src="../assets/carpics/inventory/civic2013/civic-13.jpg" alt="2013 Honda Civic Additional View 4">
+        <img src="../assets/carpics/inventory/civic2013/civic-14.jpg" alt="2013 Honda Civic Additional View 5">
+        <img src="../assets/carpics/inventory/civic2013/civic-15.jpg" alt="2013 Honda Civic Additional View 6">
     </section>
-
+    <div class="lightbox">
+        <img src="" alt="Expanded Image">
+    </div>
+    <section class="vehicle-info">
+        <h3>Vehicle Information</h3>
+        <p><strong>Make:</strong> Honda</p>
+        <p><strong>Model:</strong> Civic LX</p>
+        <p><strong>Year:</strong> 2013</p>
+        <p><strong>Mileage:</strong> 159,000 miles</p>
+        <p><strong>Title:</strong> Clean Title</p>
+        <p><strong>Ownership:</strong> 1-Owner</p>
+        <p><strong>Engine:</strong> 1.8L I4</p>
+        <p><strong>Transmission:</strong> Automatic</p>
+        <p><strong>Drive Type:</strong> FWD</p>
+        <p><strong>Fuel Economy:</strong> 30+ MPG</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+            <li>A/C</li>
+            <li>Backup Camera</li>
+            <li>Bluetooth Connectivity</li>
+            <li>Cruise Control</li>
+            <li>Power Windows</li>
+            <li>AUX Input</li>
+            <li>Keyless Entry</li>
+            <li>Newer Tires</li>
+            <li>Service Records</li>
+        </ul>
+        <p>PRICED TO SELL. Just passed inspection.</p>
+        <p>Service records available.</p>
+        <p><strong>Price:</strong> $7,800</p>
+        <p><em>Serious inquiries only.</em></p>
+    </section>
+    <section class="request-info">
+        <h3>Contact Information</h3>
+        <p>Please reach out to us for more information about this vehicle.</p>
+        <p>Phone: 980-333-8898</p>
+        <p>Email: Jourdan@lands-automotive.com</p>
+    </section>
     <footer>
         <div class="footer-content">
             <div class="business-hours">
