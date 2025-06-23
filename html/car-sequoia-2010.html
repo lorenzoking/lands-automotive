@@ -6,23 +6,13 @@
     <title>2010 Toyota Sequoia - Lands Automotive Group</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <style>
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .car-details {
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            margin: 20px;
-        }
+        .car-header { text-align: center; padding: 20px; background-color: #222; color: #f5f5f5; }
+        .car-price { font-size: 1.5em; margin-top: 10px; color: orange; }
+        .gallery { display: flex; overflow-x: auto; padding: 10px; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .gallery img { max-height: 200px; border-radius: 10px; cursor: pointer; transition: transform 0.2s; }
+        .gallery img:hover { transform: scale(1.05); }
+        .vehicle-info, .request-info { padding: 20px; background-color: #1c1c1c; color: #f5f5f5; margin-top: 20px; border-radius: 10px; }
+        .vehicle-info h3, .request-info h3 { color: orange; margin-bottom: 15px; }
     </style>
 </head>
 <body>
@@ -46,43 +36,69 @@
         </div>
     </header>
     <div class="bottom-strip">We Want to Buy Your Car!</div>
-
-    <section class="car-details">
-        <h1>2010 Toyota Sequoia</h1>
-        <h2>Price: $13,000</h2>
-        <p>Mileage: 147,000 miles</p>
-        <h3>Vehicle Details:</h3>
-        <ul>
-            <li>Year: 2010</li>
-            <li>Make: Toyota</li>
-            <li>Model: Sequoia</li>
-            <li>Mileage: 147,000 miles</li>
-            <li>Price: $13,000</li>
-            <li>Clean Title</li>
-            <li>5.7L V8 Engine</li>
-            <li>Automatic Transmission</li>
-            <li>4-Wheel Drive</li>
-        </ul>
-        <h3>Features:</h3>
-        <ul>
-            <li>Leather Seats</li>
-            <li>Third Row Seating</li>
-            <li>Power Liftgate</li>
-            <li>Navigation System</li>
-            <li>Backup Camera</li>
-            <li>Bluetooth Connectivity</li>
-            <li>Dual Zone Climate Control</li>
-            <li>Roof Rails</li>
-        </ul>
+    <section class="car-header">
+        <h1>2010 Toyota Sequoia SR5 RWD 5.7L</h1>
+        <p class="car-price" style="color: rgb(255,255,255);">$15,000</p>
     </section>
-
     <section class="gallery">
-        <img src="../assets/carpics/inventory/sequoia2010/car1.jpg" alt="2010 Toyota Sequoia Front View">
-        <img src="../assets/carpics/inventory/sequoia2010/car2.jpg" alt="2010 Toyota Sequoia Side View">
-        <img src="../assets/carpics/inventory/sequoia2010/car3.jpg" alt="2010 Toyota Sequoia Interior">
-        <img src="../assets/carpics/inventory/sequoia2010/car4.jpg" alt="2010 Toyota Sequoia Dashboard">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-01.jpg" alt="2010 Toyota Sequoia 1">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-02.jpg" alt="2010 Toyota Sequoia 2">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-03.jpg" alt="2010 Toyota Sequoia 3">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-04.jpg" alt="2010 Toyota Sequoia 4">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-05.jpg" alt="2010 Toyota Sequoia 5">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-06.jpg" alt="2010 Toyota Sequoia 6">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-07.jpg" alt="2010 Toyota Sequoia 7">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-08.jpg" alt="2010 Toyota Sequoia 8">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-09.jpg" alt="2010 Toyota Sequoia 9">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-10.jpg" alt="2010 Toyota Sequoia 10">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-11.jpg" alt="2010 Toyota Sequoia 11">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-12.jpg" alt="2010 Toyota Sequoia 12">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-13.jpg" alt="2010 Toyota Sequoia 13">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-14.jpg" alt="2010 Toyota Sequoia 14">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-15.jpg" alt="2010 Toyota Sequoia 15">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-16.jpg" alt="2010 Toyota Sequoia 16">
+        <img src="../assets/carpics/inventory/sequoia2010/seq-17.jpg" alt="2010 Toyota Sequoia 17">
     </section>
-
+    <section class="vehicle-info">
+        <h3>Vehicle Information</h3>
+        <ul>
+            <li><strong>Title Status:</strong> Clean Title</li>
+            <li><strong>Year:</strong> 2010</li>
+            <li><strong>Make:</strong> Toyota</li>
+            <li><strong>Model:</strong> Sequoia SR5</li>
+            <li><strong>Drivetrain:</strong> Rear-Wheel Drive (RWD)</li>
+            <li><strong>Engine:</strong> 5.7L V8</li>
+            <li><strong>Mileage:</strong> 147,000 miles</li>
+            <li><strong>Status:</strong> Available</li>
+            <li><strong>Price:</strong> $15,000</li>
+            <li><strong>Inspection:</strong> Just passed inspection</li>
+            <li><strong>Carfax:</strong> Clean Carfax, No Rust</li>
+            <li><strong>Location:</strong> Concord, NC</li>
+        </ul>
+        <h4>Features & Highlights:</h4>
+        <ul>
+            <li>3rd Row Seating</li>
+            <li>Tow Package</li>
+            <li>BBS Wheels</li>
+            <li>Michelin Tires (all around)</li>
+            <li>Rear Entertainment Screen</li>
+            <li>WeatherTech Mats</li>
+            <li>Bluetooth Audio & Hands-Free Calling</li>
+            <li>Power Rear Sliding Window</li>
+            <li>Running Boards</li>
+            <li>Roof Rack</li>
+            <li>Cold A/C</li>
+            <li>Power Options</li>
+            <li>Keyless Entry</li>
+            <li>Full Service Records</li>
+        </ul>
+        <p><em>Spacious, powerful, and built to last. PRICED TO SELL. Serious inquiries only. Thank you.</em></p>
+    </section>
+    <section class="request-info">
+        <h3>Contact Information</h3>
+        <p>Phone: 980-333-8898</p>
+        <p>Email: Jourdan@lands-automotive.com</p>
+    </section>
     <footer>
         <div class="footer-content">
             <div class="business-hours">
