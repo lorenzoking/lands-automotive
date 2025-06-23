@@ -61,6 +61,47 @@
                 font-weight: bold; /* Emphasize make and model */
             }
         }
+        .car-card {
+            width: 250px;
+            height: 350px;
+            overflow: hidden;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .car-card img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .car-details {
+            padding: 10px;
+            text-align: center;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .car-details h3 {
+            font-size: clamp(14px, 2vw, 18px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+        .car-details p {
+            color: white;
+            margin: 4px 0;
+            font-size: 1em;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -132,19 +173,34 @@
         <h2>Featured Inventory</h2>
         <div class="inventory-grid">
             <div class="car-card">
-                <a href="html/car-outback-2019.html"><img src="assets/carpics/inventory/outback2019/outback-01.jpg" alt="2019 Subaru Outback Limited"></a>
-                <p style="color: rgb(255, 255, 255);">2019 Subaru Outback Limited - $16,995</p>
-                <p style="color: rgb(255, 255, 255);">91,959 miles</p>
+                <a href="html/car-outback-2019.html">
+                    <img src="assets/carpics/inventory/outback2019/outback-01.jpg" alt="2019 Subaru Outback Limited">
+                    <div class="car-details">
+                        <h3>2019 Subaru Outback Limited</h3>
+                        <p>Mileage: 91,959 miles</p>
+                        <p style="color: rgb(255, 255, 255);">$16,995</p>
+                    </div>
+                </a>
             </div>
             <div class="car-card">
-                <a href="html/car-civic-2011.html"><img src="assets/carpics/inventory/civic2011/civ-01.jpg" alt="2011 Honda Civic"></a>
-                <p style="color: rgb(255, 255, 255);">2011 Honda Civic - $5,500</p>
-                <p style="color: rgb(255, 255, 255);">153,000 miles</p>
+                <a href="html/car-civic-2011.html">
+                    <img src="assets/carpics/inventory/civic2011/civ-01.jpg" alt="2011 Honda Civic">
+                    <div class="car-details">
+                        <h3>2011 Honda Civic</h3>
+                        <p>Mileage: 153,000 miles</p>
+                        <p style="color: rgb(255, 255, 255);">$5,500</p>
+                    </div>
+                </a>
             </div>
             <div class="car-card">
-                <a href="html/car-venza-2011.html"><img src="assets/carpics/inventory/venza2011/venza-01.jpg" alt="2011 Toyota Venza"></a>
-                <p style="color: rgb(255, 255, 255);">2011 Toyota Venza - $7,500</p>
-                <p style="color: rgb(255, 255, 255);">170,000 miles</p>
+                <a href="html/car-venza-2011.html">
+                    <img src="assets/carpics/inventory/venza2011/venza-01.jpg" alt="2011 Toyota Venza">
+                    <div class="car-details">
+                        <h3>2011 Toyota Venza</h3>
+                        <p>Mileage: 170,000 miles</p>
+                        <p style="color: rgb(255, 255, 255);">$7,500</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="inventory-link-section" style="background-color: #333; color: #fff; padding: 30px; text-align: center; margin-top: 20px;">
