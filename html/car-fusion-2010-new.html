@@ -24,6 +24,11 @@
                     <img src="../assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
                 </a>
             </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -106,5 +111,14 @@
         </div>
         <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html> 
