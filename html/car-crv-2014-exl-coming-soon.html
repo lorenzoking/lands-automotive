@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - 2014 Honda CR-V EX-L</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .car-header { text-align: center; padding: 20px; background-color: #222; color: #f5f5f5; }
+        .car-price { font-size: 1.5em; margin-top: 10px; color: orange; }
+        .gallery { display: flex; overflow-x: auto; padding: 10px; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .gallery img { max-height: 200px; border-radius: 10px; cursor: pointer; transition: transform 0.2s; }
+        .gallery img:hover { transform: scale(1.05); }
+        .vehicle-info, .request-info { padding: 20px; background-color: #1c1c1c; color: #f5f5f5; margin-top: 20px; border-radius: 10px; }
+        .vehicle-info h3, .request-info h3 { color: orange; margin-bottom: 15px; }
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center; z-index: 1000; }
+        .lightbox img { max-width: 90%; max-height: 90%; }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery img');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox img');
+            images.forEach(img => { img.addEventListener('click', function() { lightboxImg.src = img.src; lightbox.style.display = 'flex'; }); });
+            lightbox.addEventListener('click', function() { lightbox.style.display = 'none'; });
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            if (toggle) { toggle.addEventListener('click', function() { nav.classList.toggle('active'); }); }
+        });
+    </script>
+    </head>
+<body>
+    <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="inventory.html">Inventory</a>
+                        <div class="dropdown">
+                            <a href="../html/inventory.html">All Inventory</a>
+                            <a href="../html/inventory-under-10000.html">Under 10,000</a>
+                        </div>
+                    </li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
+                    <li><a href="../html/sell.html">Sell Your Car</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bottom-strip">We Want to Buy Your Car!</div>
+    <section class="car-header">
+        <h1>2014 Honda CR-V EX-L</h1>
+        <p class="car-price">COMING SOON — Price TBD</p>
+    </section>
+    <section class="gallery">
+        <img src="../assets/logo/landslogotransparent.png" alt="Placeholder Image">
+    </section>
+    <div class="lightbox"><img src="" alt="Expanded Image"></div>
+    <section class="vehicle-info">
+        <h3>Vehicle Information</h3>
+        <p><strong>Make:</strong> Honda</p>
+        <p><strong>Model:</strong> CR-V EX-L</p>
+        <p><strong>Year:</strong> 2014</p>
+        <p><strong>VIN:</strong> 5J6RM3H75EL031419</p>
+        <p><strong>Mileage:</strong> 153,207 miles</p>
+        <p><strong>Status:</strong> Coming Soon</p>
+        <p>Full details and photos will be added soon. Contact us for early inquiries or to reserve a viewing once available.</p>
+    </section>
+    <section class="request-info">
+        <h3>Contact Information</h3>
+        <p>Phone: 980-333-8898</p>
+        <p>Email: jourdan@lands-automotive.com</p>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>By Appointment Only</p>
+                <p>Monday - Friday: 10 AM – 6 PM</p>
+                <p>Saturday: 10 AM – 2 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phone: 980-333-8898</p>
+                <p>Email: jourdan@lands-automotive.com</p>
+            </div>
+        </div>
+        <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
