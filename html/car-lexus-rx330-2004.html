@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2004 Lexus RX 330 Sport Utility 4D - Lands Automotive Group</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .car-header { text-align: center; padding: 20px; background-color: #222; color: #f5f5f5; }
+        .car-price { font-size: 1.5em; margin-top: 10px; color: orange; }
+        .gallery { display: flex; overflow-x: auto; padding: 10px; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .gallery img { max-height: 200px; border-radius: 10px; cursor: pointer; transition: transform 0.2s; }
+        .gallery img:hover { transform: scale(1.05); }
+        .vehicle-info, .request-info { padding: 20px; background-color: #1c1c1c; color: #f5f5f5; margin-top: 20px; border-radius: 10px; }
+        .vehicle-info h3, .request-info h3 { color: orange; margin-bottom: 15px; }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            max-width: 90%;
+            max-height: 90vh;
+            margin-top: 5vh;
+            object-fit: contain;
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-strip">Call us: 980-333-8898 | Address: 4435 Motorsports Dr Suite 120, Concord, NC</div>
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo/landslogotransparent.png" alt="Lands Automotive Group Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sell.html">Sell Your Car</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bottom-strip">We Want to Buy Your Car!</div>
+    <section class="car-header">
+        <h1>2004 Lexus RX 330 Sport Utility 4D</h1>
+        <p class="car-price" style="color: rgb(255,255,255);">$5,500</p>
+    </section>
+    <section class="gallery">
+        <img src="../assets/carpics/inventory/rx2004/lexus-01.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-02.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-03.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-04.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-05.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-06.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-07.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-08.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-09.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-10.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-11.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-12.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-13.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-14.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-15.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+        <img src="../assets/carpics/inventory/rx2004/lexus-16.jpg" alt="2004 Lexus RX 330" onclick="openModal(this.src)">
+    </section>
+    
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <section class="vehicle-info">
+        <h3>Vehicle Information</h3>
+        <ul>
+            <li><strong>Make:</strong> Lexus</li>
+            <li><strong>Model:</strong> RX 330</li>
+            <li><strong>Year:</strong> 2004</li>
+            <li><strong>Mileage:</strong> 196,000 miles</li>
+            <li><strong>Status:</strong> Available</li>
+            <li><strong>Price:</strong> $5,500</li>
+            <li><strong>Title:</strong> Clean Title</li>
+            <li><strong>Engine:</strong> 3.3L V6</li>
+            <li><strong>Ownership:</strong> 1-Owner</li>
+            <li><strong>Inspection:</strong> Just passed inspection</li>
+            <li><strong>Location:</strong> Concord, NC</li>
+        </ul>
+        <h3>Features</h3>
+        <ul>
+            <li>Bamboo Pearl Color (Rare & Stunning)</li>
+            <li>Leather Seating</li>
+            <li>Sunroof</li>
+            <li>Premium Audio System</li>
+            <li>Dual-Zone Climate Control</li>
+            <li>Power Windows & Locks</li>
+            <li>Reliable 3.3L V6 Engine</li>
+            <li>Lexus Build Quality</li>
+        </ul>
+        <p><strong>PRICED TO SELL.</strong> Just passed inspection. Finished in the stunning and rare Bamboo Pearl color, this RX 330 stands out for its elegance and style. Well-kept 1-owner example with a clean interior, smooth ride, and Lexus build quality. Features leather seating, sunroof, premium audio, and dual-zone climate control.<br><br><strong>Serious inquiries only.</strong><br>Thank you.</p>
+    </section>
+    <section class="request-info">
+        <h3>Contact Information</h3>
+        <p>Phone: 980-333-8898</p>
+        <p>Email: Jourdan@lands-automotive.com</p>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>By Appointment Only</p>
+                <p>Monday - Friday: 10 AM – 6 PM</p>
+                <p>Saturday: 10 AM – 2 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phone: 980-333-8898</p>
+                <p>Email: Jourdan@lands-automotive.com</p>
+            </div>
+        </div>
+        <p>&copy; 2023 Lands Automotive Group. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+        
+        function openModal(imgSrc) {
+            document.getElementById('imageModal').style.display = "block";
+            document.getElementById('modalImage').src = imgSrc;
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                document.getElementById('imageModal').style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
